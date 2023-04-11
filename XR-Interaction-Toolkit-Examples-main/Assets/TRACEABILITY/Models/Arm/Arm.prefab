@@ -237,6 +237,7 @@ MonoBehaviour:
   components:
   - {fileID: 3690408677215482188}
   - {fileID: 2764257629714435278}
+  - {fileID: 1339009126067775658}
 --- !u!114 &1658597982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,7 +251,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 0}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
