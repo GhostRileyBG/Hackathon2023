@@ -894,16 +894,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1658597983, guid: f4e63b480d37edf44bd308ae87265870, type: 3}
-      propertyPath: data
-      value: 
-      objectReference: {fileID: 11400000, guid: 1e670160e2ac5f7449c6b1c80e5875ec,
-        type: 2}
-    - target: {fileID: 728864242221434167, guid: f4e63b480d37edf44bd308ae87265870,
-        type: 3}
-      propertyPath: m_StartingSelectedInteractable
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2461062690246331414, guid: f4e63b480d37edf44bd308ae87265870,
         type: 3}
       propertyPath: m_Name

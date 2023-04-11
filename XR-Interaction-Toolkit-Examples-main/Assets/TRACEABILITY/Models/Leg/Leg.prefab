@@ -55,7 +55,7 @@ MonoBehaviour:
   m_AttachTransform: {fileID: 5572517084596228256}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
-  m_StartingSelectedInteractable: {fileID: 3690408677215482187}
+  m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
   m_HoverEntered:
     m_PersistentCalls:
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c37bd25677440d4aa46be3bc83188a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: 1e670160e2ac5f7449c6b1c80e5875ec, type: 2}
   timer: 0
   components:
   - {fileID: 3690408677215482188}
@@ -1002,7 +1002,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: -7880005313051214562, guid: 786f147622999214296a60aaf45fd28c, type: 3}
+  m_Mesh: {fileID: 5058257671741007853, guid: 786f147622999214296a60aaf45fd28c, type: 3}
 --- !u!4 &2764257629714435279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6957000769822834732, guid: d81193b4b57486b46b4762e8b26d2de8,
@@ -1185,18 +1185,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2175187011753756096, guid: d81193b4b57486b46b4762e8b26d2de8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d81193b4b57486b46b4762e8b26d2de8, type: 3}
---- !u!114 &3690408677215482187 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6957000769822834730, guid: d81193b4b57486b46b4762e8b26d2de8,
-    type: 3}
-  m_PrefabInstance: {fileID: 6033359451721462113}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3690408677215482188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3690408677215482188 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6957000769822834733, guid: d81193b4b57486b46b4762e8b26d2de8,
