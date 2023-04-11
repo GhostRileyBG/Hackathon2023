@@ -30,16 +30,15 @@ public class VerifPlate : MonoBehaviour
         if (currentObject.data.objectState == zoneType)
         {
             Debug.Log("WELL DONE THIS WAS RIGHT ");
+            GPCtrl.instance.score += Mathf.RoundToInt(100 * 1 / currentObject.timer);
             //add a point to the score
         } else
         {
             Debug.Log("TOO BAD, YOU GOT IT WRONG");
             //malus ? game over ? 
         }
-
-
-        //spawn new object
-
+        Destroy(currentObject.gameObject);
+        currentObject = null;
     }
 
 }
