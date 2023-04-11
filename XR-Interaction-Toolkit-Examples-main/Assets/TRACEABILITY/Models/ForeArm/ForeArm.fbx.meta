@@ -3,7 +3,27 @@ guid: c92ec27e45de2fb43b9093ed6d1f8c86
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base Arm
+    second: {fileID: 2100000, guid: 888b3791b0e07764c9899ce7d800bd71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fingers
+    second: {fileID: 2100000, guid: 91de95f7d06b53944a9bebf2616a9ab3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Forearm
+    second: {fileID: 2100000, guid: 43401b90f3fcef645b70760ecc3885a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hand
+    second: {fileID: 2100000, guid: 36886d3b31f741647bff84866f7f8331, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
