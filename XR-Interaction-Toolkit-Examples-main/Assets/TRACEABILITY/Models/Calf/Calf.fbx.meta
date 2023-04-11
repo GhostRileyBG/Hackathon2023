@@ -7,8 +7,24 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: CalfUnderside
+    second: {fileID: 8343955859495325449, guid: 786f147622999214296a60aaf45fd28c,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Jambe
+    second: {fileID: 2100000, guid: a0b73cbf7e0a56d4ab133c326b17187b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Jambe.001
     second: {fileID: 2100000, guid: a0b73cbf7e0a56d4ab133c326b17187b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mollet
+    second: {fileID: 2100000, guid: 92452b62907089e4a800e9142bbc593b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
