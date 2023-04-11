@@ -9,7 +9,6 @@ public class ObjectData : ScriptableObject
     {
         False = 0,
         Real = 1,
-        Broken = 2
     }
 
     public ObjectState objectState;
