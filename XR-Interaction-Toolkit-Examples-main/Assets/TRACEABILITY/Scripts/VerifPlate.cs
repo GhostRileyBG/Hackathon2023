@@ -16,7 +16,6 @@ public class VerifPlate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("this is a " + zoneType.ToString());
         currentObject = other.GetComponent<Interactable>();
     }
 
