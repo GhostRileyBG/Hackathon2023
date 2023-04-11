@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2ff265b1dadb72944aafac94ad157379
+guid: 845cadb8750ed19469da116325924470
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,23 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Jambe
+      name: Jambe.004
     second: {fileID: 2100000, guid: 3853d172b4a009940b280136813f09c0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Mollet
+      name: Mollet.005
     second: {fileID: 2100000, guid: 40dd4139b0b4b96409588a9577be9f4f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Oreils
-    second: {fileID: 2100000, guid: b68ccb930656e144ab7977785a40c09a, type: 2}
+    second: {fileID: 2100000, guid: 0efb6120dae5d2f419f9ab3b507bf8a5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Pied
-    second: {fileID: 2100000, guid: dea38c2c271056443b147dfe8ba630cc, type: 2}
+      name: Pied.003
+    second: {fileID: 2100000, guid: 56ff2b780ae559b458d2a6d1e91e71b4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
