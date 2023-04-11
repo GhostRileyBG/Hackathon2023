@@ -12,9 +12,9 @@ public class GPCtrl : MonoBehaviour
     [SerializeField]
     private List<VerifPlate> plates;
     public float timer = 0;
-    public Text timerText;
     public float maxTime;
     public int score;
+    public Text timerText;
     public Text scoreText;
     public Text finalScoreText;
     public GameObject table;
@@ -73,6 +73,8 @@ public class GPCtrl : MonoBehaviour
 
     public void GameOver()
     {
+        Debug.Log("WELL DONE ! YOUR SCORE : " + score);
+        timer = 0;
         table.SetActive(false);
         gameOver.SetActive(true);
         finalScoreText.text = score.ToString();
