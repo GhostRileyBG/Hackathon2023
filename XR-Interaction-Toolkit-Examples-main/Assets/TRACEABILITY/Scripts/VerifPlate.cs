@@ -16,7 +16,6 @@ public class VerifPlate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("this is a " + zoneType.ToString());
         currentObject = other.GetComponent<Interactable>();
     }
 
@@ -38,12 +37,15 @@ public class VerifPlate : MonoBehaviour
             Debug.Log("WELL DONE THIS WAS RIGHT ");
             GPCtrl.instance.score += Mathf.RoundToInt(100 * 1 / currentObject.timer);
             StartCoroutine(lightUp(true));
-            //add a point to the score
         } else
         {
             Debug.Log("TOO BAD, YOU GOT IT WRONG");
             StartCoroutine(lightUp(false));
             //malus ? game over ? 
+        }
+        for (int i = 0; i < currentObject.components.Count; i++) // destroy all plates of object inspected
+        {
+            Destroy(currentObject.components[i]);
         }
         Destroy(currentObject.gameObject);
         currentObject = null;

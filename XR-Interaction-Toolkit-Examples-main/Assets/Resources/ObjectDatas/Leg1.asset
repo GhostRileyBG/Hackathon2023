@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c990910bbd579b94eab54441cf23ec6d, type: 3}
-  m_Name: Leg2
+  m_Name: Leg1
   m_EditorClassIdentifier: 
-  objectState: 0
-  prefabObject: {fileID: 5855381517955324568, guid: 20c1252ceeb764f4b87116188781eb12,
+  objectState: 1
+  prefabObject: {fileID: 2461062690246331414, guid: f4e63b480d37edf44bd308ae87265870,
     type: 3}

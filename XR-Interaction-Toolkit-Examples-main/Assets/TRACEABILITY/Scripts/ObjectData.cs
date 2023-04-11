@@ -7,8 +7,8 @@ public class ObjectData : ScriptableObject
 {
     public enum ObjectState
     {
-        False = 0,
-        Real = 1,
+        Wrong = 0,
+        Right = 1
     }
 
     public ObjectState objectState;

@@ -31,13 +31,14 @@ public class GPCtrl : MonoBehaviour
             Destroy(gameObject);
         }
         datas.Clear();
-        ObjectData[] _datas = Resources.LoadAll<ObjectData>("ObjectData");
+        ObjectData[] _datas = Resources.LoadAll<ObjectData>("ObjectDatas");
         for (int i = 0; i < _datas.Length; i++)
         {
             datas.Add(_datas[i]);
         }
         table.SetActive(true);
         gameOver.SetActive(false);
+        InstantiateRandomInteractable();
     }
 
     public void ValidateChoice()
@@ -56,19 +57,21 @@ public class GPCtrl : MonoBehaviour
     public void InstantiateRandomInteractable()
     {
         int index = Random.Range(0, datas.Count);
-        Interactable _interactable = Instantiate(datas[index].prefabObject).GetComponent<Interactable>();
+        Interactable _interactable = Instantiate(datas[index].prefabObject, transform).GetComponent<Interactable>();
         _interactable.data = datas[index];
     }
 
     private void Update()
     {
-        timer += Time.deltaTime;
         timerText.text = (maxTime - timer).ToString();
         scoreText.text = score.ToString();
         if (timer >= maxTime)
         {
             GameOver();
+            return;
         }
+        timer += Time.deltaTime;
+
     }
 
     public void GameOver()
@@ -82,6 +85,6 @@ public class GPCtrl : MonoBehaviour
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene("Interaction Menu");
+        SceneManager.LoadScene("MainMenu");
     }
 }
