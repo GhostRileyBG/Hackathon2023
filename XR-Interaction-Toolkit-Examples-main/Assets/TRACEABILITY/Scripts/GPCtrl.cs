@@ -63,5 +63,6 @@ public class GPCtrl : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("WELL DONE ! YOUR SCORE : " + score);
+        timer = 0;
     }
 }
