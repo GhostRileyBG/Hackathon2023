@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GPCtrl : MonoBehaviour
 {
@@ -12,6 +14,11 @@ public class GPCtrl : MonoBehaviour
     public float timer = 0;
     public float maxTime;
     public int score;
+    public Text timerText;
+    public Text scoreText;
+    public Text finalScoreText;
+    public GameObject table;
+    public GameObject gameOver;
 
     public void Awake()
     {
@@ -29,6 +36,8 @@ public class GPCtrl : MonoBehaviour
         {
             datas.Add(_datas[i]);
         }
+        table.SetActive(true);
+        gameOver.SetActive(false);
     }
 
     public void ValidateChoice()
@@ -54,6 +63,8 @@ public class GPCtrl : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
+        timerText.text = (maxTime - timer).ToString();
+        scoreText.text = score.ToString();
         if (timer >= maxTime)
         {
             GameOver();
@@ -64,5 +75,13 @@ public class GPCtrl : MonoBehaviour
     {
         Debug.Log("WELL DONE ! YOUR SCORE : " + score);
         timer = 0;
+        table.SetActive(false);
+        gameOver.SetActive(true);
+        finalScoreText.text = score.ToString();
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Interaction Menu");
     }
 }

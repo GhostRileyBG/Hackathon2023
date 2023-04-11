@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
@@ -13,6 +14,6 @@ public class Menu : MonoBehaviour
 
     public void startTutorial()
     {
-        Debug.Log("Start game");
+        SceneManager.LoadScene("Game");
     }
 }
