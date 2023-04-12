@@ -80,7 +80,13 @@ public class GPCtrl : MonoBehaviour
         timer = 0;
         table.SetActive(false);
         gameOver.SetActive(true);
+        gameOver.GetComponent<AudioSource>().Play(0);
         finalScoreText.text = score.ToString();
+    }
+
+    public void TryAgain()
+    {
+        SceneManager.LoadScene("Game");
     }
 
     public void BackToMenu()
