@@ -37,14 +37,12 @@ public class VerifPlate : MonoBehaviour
         if (currentObject == null) return;
         if (currentObject.data.objectState == zoneType)
         {
-            Debug.Log("WELL DONE THIS WAS RIGHT ");
             GPCtrl.instance.score += Mathf.RoundToInt(100 * 1 / currentObject.timer);
             StartCoroutine(lightUp(true));
         } else
         {
             Debug.Log("TOO BAD, YOU GOT IT WRONG");
             StartCoroutine(lightUp(false));
-            //malus ? game over ? 
         }
         for (int i = 0; i < currentObject.components.Count; i++) // destroy all plates of object inspected
         {

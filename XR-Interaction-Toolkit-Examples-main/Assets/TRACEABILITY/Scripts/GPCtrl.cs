@@ -19,8 +19,8 @@ public class GPCtrl : MonoBehaviour
     public Text finalScoreText;
     public GameObject table;
     public GameObject gameOver;
-    public List<Interactable> interactables;
     public List<Interactable> interactablesWholeList;
+    public bool allowNewLimbActivation = true;
 
     public void Awake()
     {
@@ -44,22 +44,10 @@ public class GPCtrl : MonoBehaviour
         }
         table.SetActive(true);
         gameOver.SetActive(false);
-        //for (int i = 0; i < interactables.Count; i++)
-        //{
-        //    DeactivateInteractable(interactables[i]);
-        //}
-        //for (int i = 0; i < interactablesWholeList.Count; i++)
-        //{
-        //    interactablesWholeList[i].gameObject.SetActive(false);
-        //    //DeactivateInteractable(interactables[i]);
-        //}
-        InstantiateRandomInteractable();
-
     }
 
     public void ValidateChoice()
     {
-        Debug.Log("VALIDATE CHOICE");
         for (int i = 0; i < plates.Count; i++)
         {
             if (plates[i].currentObject != null)
@@ -73,18 +61,36 @@ public class GPCtrl : MonoBehaviour
 
     public void InstantiateRandomInteractable()
     {
-        int index = Random.Range(0, datas.Count);
+        int index = 0;
+        bool isPossible = false;
 
-        //GameObject _object =  //Instantiate(datas[index].prefabObject);
-        while(interactablesWholeList[datas[index].refWholeListIndexPrefab].alreadyUsed)
+        while (interactablesWholeList[datas[index].refWholeListIndexPrefab].alreadyUsed) //try to find an unused number
         {
             index = Random.Range(0, datas.Count);
+            for (int i = 0; i < interactablesWholeList.Count; i++)
+            {
+                if (interactablesWholeList[i].alreadyUsed) isPossible = false;
+            }
+            if (isPossible)
+            {
+                break;
+            }
+        }
+        if (isPossible)
+        {
+            GameOver();
+        }
 
+        for (int i = 0; i < interactablesWholeList.Count; i++)
+        {
+                interactablesWholeList[i].gameObject.SetActive(false);
+                for (int j = 0; j < interactablesWholeList[i].components.Count; j++)
+                {
+                    interactablesWholeList[i].components[j].transform.position += new Vector3(100, 100, 100);
+                }
         }
         Interactable _interactable = interactablesWholeList[datas[index].refWholeListIndexPrefab];
         _interactable.gameObject.SetActive(true);
-        Debug.Log("interactable : " + _interactable.name);
-        //_interactable.transform.position = transform.position;
         _interactable.data = datas[index];
         _interactable.InitialiseInteractable();
         _interactable.alreadyUsed = true;
@@ -93,17 +99,23 @@ public class GPCtrl : MonoBehaviour
     public void DeactivateInteractable(Interactable _interactable)
     {
         _interactable.gameObject.SetActive(false);
-        _interactable.transform.position = transform.position;
         for (int i = 0; i < _interactable.components.Count; i++)
         {
             _interactable.components[i].SetActive(false);
         }
+        allowNewLimbActivation = true;
     }
 
     private void Update()
     {
         timerText.text = (maxTime - timer).ToString();
         scoreText.text = score.ToString();
+        if (allowNewLimbActivation)
+        {
+            allowNewLimbActivation = false;
+            InstantiateRandomInteractable();
+        }
+
         if (timer >= maxTime)
         {
             GameOver();
@@ -115,7 +127,6 @@ public class GPCtrl : MonoBehaviour
 
     public void GameOver()
     {
-        Debug.Log("WELL DONE ! YOUR SCORE : " + score);
         timer = 0;
         table.SetActive(false);
         gameOver.SetActive(true);
