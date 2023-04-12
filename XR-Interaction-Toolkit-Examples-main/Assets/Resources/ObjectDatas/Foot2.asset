@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c990910bbd579b94eab54441cf23ec6d, type: 3}
   m_Name: Foot2
   m_EditorClassIdentifier: 
-  objectState: 0
+  objectState: 1
   prefabObject: {fileID: 2461062690246331414, guid: 372f2b79aef1b59438a09d69e75ca65e,
     type: 3}
   shouldPlayBrokenSound: 0
   refIndexPrefab: 5
   refWholeListIndexPrefab: 11
+  texturegaetan: {fileID: 0}
