@@ -13,4 +13,10 @@ public class ObjectData : ScriptableObject
 
     public ObjectState objectState;
     public GameObject prefabObject;
+    public bool shouldPlayBrokenSound;
+
+    public int refIndexPrefab;
+    public int refWholeListIndexPrefab;
+
+    public Material texturegaetan;
 }
