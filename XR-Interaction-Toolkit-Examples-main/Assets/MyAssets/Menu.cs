@@ -6,14 +6,29 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
 
+    public AudioSource click;
+    public AudioSource woosh;
+
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    public void startTutorial()
+    public void startGame()
     {
+        StartCoroutine(launch());
+    }
+
+    public IEnumerator launch()
+    {
+        click.Play(0);
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene("Game");
+    }
+
+    public void onHover()
+    {
+        woosh.Play(0);
     }
 }
