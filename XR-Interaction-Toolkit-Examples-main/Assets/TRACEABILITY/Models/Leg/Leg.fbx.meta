@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: CalfUnderside
+    second: {fileID: 2100000, guid: ebd53355480119a4aa00d2b8e2a2cc93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Cuisse
     second: {fileID: 2100000, guid: 8a7daa258396da048905502afb94e2f6, type: 2}
   - first:
@@ -29,6 +34,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Mollet
     second: {fileID: 2100000, guid: 92452b62907089e4a800e9142bbc593b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ThighUnderside
+    second: {fileID: 2100000, guid: d39215988421f8a44854dd125fc1fc01, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
