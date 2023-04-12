@@ -28,7 +28,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Upper Arm
-    second: {fileID: 2100000, guid: db3267acd8233d44c886ccd669e96a1c, type: 2}
+    second: {fileID: 2100000, guid: 43c9e09b7abb95448806e6fc90808ad2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -356,12 +356,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c37bd25677440d4aa46be3bc83188a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 1e670160e2ac5f7449c6b1c80e5875ec, type: 2}
+  data: {fileID: 11400000, guid: b01d930a5ef568c45a118f768baaea1d, type: 2}
   timer: 0
   components:
   - {fileID: 3690408677215482188}
   - {fileID: 2764257629714435278}
+  componentsTransform: []
   soundMovement: {fileID: 8512541780042109794}
+  isInitialized: 0
+  alreadyUsed: 0
 --- !u!114 &1658597982
 MonoBehaviour:
   m_ObjectHideFlags: 0
