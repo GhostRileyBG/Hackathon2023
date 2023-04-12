@@ -17,3 +17,5 @@ MonoBehaviour:
     type: 3}
   shouldPlayBrokenSound: 0
   refIndexPrefab: 0
+  refWholeListIndexPrefab: 0
+  texturegaetan: {fileID: 2100000, guid: 43401b90f3fcef645b70760ecc3885a3, type: 2}

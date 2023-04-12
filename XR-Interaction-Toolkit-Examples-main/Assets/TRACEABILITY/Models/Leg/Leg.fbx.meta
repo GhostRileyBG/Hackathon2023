@@ -18,7 +18,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cuisse
-    second: {fileID: 2100000, guid: 8a7daa258396da048905502afb94e2f6, type: 2}
+    second: {fileID: 2100000, guid: 4edd95254f70c124890f4b4306b3ccad, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

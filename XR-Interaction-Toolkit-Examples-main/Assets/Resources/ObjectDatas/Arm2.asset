@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c990910bbd579b94eab54441cf23ec6d, type: 3}
   m_Name: Arm2
   m_EditorClassIdentifier: 
-  objectState: 1
+  objectState: 0
   prefabObject: {fileID: 2461062690246331414, guid: f4e63b480d37edf44bd308ae87265870,
     type: 3}
   shouldPlayBrokenSound: 0
   refIndexPrefab: 0
   refWholeListIndexPrefab: 6
+  texturegaetan: {fileID: 2100000, guid: fb6c64aee45c04540ae3112b5a391c20, type: 2}
