@@ -19,6 +19,8 @@ public class GPCtrl : MonoBehaviour
     public Text finalScoreText;
     public GameObject table;
     public GameObject gameOver;
+    public List<Interactable> interactables;
+    public List<Interactable> interactablesWholeList;
 
     public void Awake()
     {
@@ -30,6 +32,10 @@ public class GPCtrl : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
         datas.Clear();
         ObjectData[] _datas = Resources.LoadAll<ObjectData>("ObjectDatas");
         for (int i = 0; i < _datas.Length; i++)
@@ -38,7 +44,17 @@ public class GPCtrl : MonoBehaviour
         }
         table.SetActive(true);
         gameOver.SetActive(false);
+        //for (int i = 0; i < interactables.Count; i++)
+        //{
+        //    DeactivateInteractable(interactables[i]);
+        //}
+        //for (int i = 0; i < interactablesWholeList.Count; i++)
+        //{
+        //    interactablesWholeList[i].gameObject.SetActive(false);
+        //    //DeactivateInteractable(interactables[i]);
+        //}
         InstantiateRandomInteractable();
+
     }
 
     public void ValidateChoice()
@@ -50,6 +66,7 @@ public class GPCtrl : MonoBehaviour
             {
                 plates[i].CheckPlateMatching();
                 InstantiateRandomInteractable();
+                break;
             }
         }
     }
@@ -57,8 +74,30 @@ public class GPCtrl : MonoBehaviour
     public void InstantiateRandomInteractable()
     {
         int index = Random.Range(0, datas.Count);
-        Interactable _interactable = Instantiate(datas[index].prefabObject, transform).GetComponent<Interactable>();
+
+        //GameObject _object =  //Instantiate(datas[index].prefabObject);
+        while(interactablesWholeList[datas[index].refWholeListIndexPrefab].alreadyUsed)
+        {
+            index = Random.Range(0, datas.Count);
+
+        }
+        Interactable _interactable = interactablesWholeList[datas[index].refWholeListIndexPrefab];
+        _interactable.gameObject.SetActive(true);
+        Debug.Log("interactable : " + _interactable.name);
+        //_interactable.transform.position = transform.position;
         _interactable.data = datas[index];
+        _interactable.InitialiseInteractable();
+        _interactable.alreadyUsed = true;
+    }
+
+    public void DeactivateInteractable(Interactable _interactable)
+    {
+        _interactable.gameObject.SetActive(false);
+        _interactable.transform.position = transform.position;
+        for (int i = 0; i < _interactable.components.Count; i++)
+        {
+            _interactable.components[i].SetActive(false);
+        }
     }
 
     private void Update()

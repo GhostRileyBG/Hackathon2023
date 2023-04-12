@@ -16,7 +16,10 @@ public class VerifPlate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        currentObject = other.GetComponent<Interactable>();
+        if (other.GetComponent<Interactable>() != null)
+        {
+            currentObject = other.GetComponent<Interactable>();
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -45,9 +48,11 @@ public class VerifPlate : MonoBehaviour
         }
         for (int i = 0; i < currentObject.components.Count; i++) // destroy all plates of object inspected
         {
-            Destroy(currentObject.components[i]);
+            currentObject.components[i].transform.SetParent(currentObject.transform);
+            //Destroy(currentObject.components[i]);
         }
-        Destroy(currentObject.gameObject);
+        GPCtrl.instance.DeactivateInteractable(currentObject);
+        //Destroy(currentObject.gameObject);
         currentObject = null;
     }
 
@@ -57,13 +62,13 @@ public class VerifPlate : MonoBehaviour
         {
             correctSFX.Play(0);
             greenLight.SetActive(true);
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1);
             greenLight.SetActive(false);
         } else
         {
             incorrectSFX.Play(0);
             redLight.SetActive(true);
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1);
             redLight.SetActive(false);
         }
     }

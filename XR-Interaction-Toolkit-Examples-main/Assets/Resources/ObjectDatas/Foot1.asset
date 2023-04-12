@@ -15,3 +15,6 @@ MonoBehaviour:
   objectState: 1
   prefabObject: {fileID: 2461062690246331414, guid: 372f2b79aef1b59438a09d69e75ca65e,
     type: 3}
+  shouldPlayBrokenSound: 0
+  refIndexPrefab: 5
+  refWholeListIndexPrefab: 5
