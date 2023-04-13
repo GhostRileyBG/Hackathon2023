@@ -2584,8 +2584,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5082238701112432920, guid: b787b3374f696b74cab05f9db0665eca,
         type: 3}
+      propertyPath: m_ToggleButton
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5082238701112432920, guid: b787b3374f696b74cab05f9db0665eca,
+        type: 3}
       propertyPath: m_PressDistance
-      value: 0
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 5082238701112432920, guid: b787b3374f696b74cab05f9db0665eca,
         type: 3}
@@ -2594,9 +2599,29 @@ PrefabInstance:
       objectReference: {fileID: 1113782707}
     - target: {fileID: 5082238701112432920, guid: b787b3374f696b74cab05f9db0665eca,
         type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5082238701112432920, guid: b787b3374f696b74cab05f9db0665eca,
+        type: 3}
       propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 162087202}
+    - target: {fileID: 5082238701112432920, guid: b787b3374f696b74cab05f9db0665eca,
+        type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: startGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 5082238701112432920, guid: b787b3374f696b74cab05f9db0665eca,
+        type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Menu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5082238701112432920, guid: b787b3374f696b74cab05f9db0665eca,
+        type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8240620245827505015, guid: b787b3374f696b74cab05f9db0665eca,
         type: 3}
       propertyPath: m_RootOrder
@@ -2724,7 +2749,7 @@ PrefabInstance:
     - target: {fileID: 5773256366622995465, guid: 5eccbf4be2c00e94689ee8062e4e7276,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5773256366622995465, guid: 5eccbf4be2c00e94689ee8062e4e7276,
         type: 3}
@@ -2734,7 +2759,7 @@ PrefabInstance:
     - target: {fileID: 5773256366622995465, guid: 5eccbf4be2c00e94689ee8062e4e7276,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5773256366622995465, guid: 5eccbf4be2c00e94689ee8062e4e7276,
         type: 3}
@@ -2749,7 +2774,7 @@ PrefabInstance:
     - target: {fileID: 5773256366622995465, guid: 5eccbf4be2c00e94689ee8062e4e7276,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 5773256366622995465, guid: 5eccbf4be2c00e94689ee8062e4e7276,
         type: 3}
