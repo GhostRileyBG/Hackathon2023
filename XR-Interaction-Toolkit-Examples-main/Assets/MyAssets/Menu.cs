@@ -20,6 +20,11 @@ public class Menu : MonoBehaviour
         StartCoroutine(launch());
     }
 
+    public void quitGame()
+    {
+        Application.Quit();
+    }
+
     public IEnumerator launch()
     {
         click.Play(0);
