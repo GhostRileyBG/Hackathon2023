@@ -175,7 +175,7 @@ MonoBehaviour:
   - {fileID: 1419839763}
   - {fileID: 897373295}
   timer: 0
-  maxTime: 60
+  maxTime: 10000
   score: 0
   timerText: {fileID: 1138309243}
   scoreText: {fileID: 1849147508}
@@ -935,6 +935,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ReceiveGI
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447331667604542231, guid: dd33ff384c8d3e440bb0926139eeb7b2,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 5.4
       objectReference: {fileID: 0}
     - target: {fileID: 5447331667604542231, guid: dd33ff384c8d3e440bb0926139eeb7b2,
         type: 3}
