@@ -35,7 +35,7 @@ public class VerifPlate : MonoBehaviour
     {
         //check if matches with data
         if (currentObject == null) return;
-        if (currentObject.data.objectState == zoneType)
+        if (currentObject.objectState == zoneType)
         {
             GPCtrl.instance.score += Mathf.RoundToInt(100 * 1 / currentObject.timer);
             StartCoroutine(lightUp(true));
