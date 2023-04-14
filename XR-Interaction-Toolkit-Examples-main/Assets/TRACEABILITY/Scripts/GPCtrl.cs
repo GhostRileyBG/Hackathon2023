@@ -61,37 +61,25 @@ public class GPCtrl : MonoBehaviour
 
     public void InstantiateRandomInteractable()
     {
-        int index = 0;
-        bool isPossible = false;
-
-        while (interactablesWholeList[datas[index].refWholeListIndexPrefab].alreadyUsed) //try to find an unused number
-        {
-            index = Random.Range(0, datas.Count);
-            for (int i = 0; i < interactablesWholeList.Count; i++)
-            {
-                if (interactablesWholeList[i].alreadyUsed) isPossible = false;
-            }
-            if (isPossible)
-            {
-                break;
-            }
-        }
-        if (isPossible)
+        List<Interactable> _interactables = interactablesWholeList.FindAll(x => !x.alreadyUsed);
+        Debug.Log("number of things left : " + _interactables.Count);
+        if (_interactables.Count == 0)
         {
             GameOver();
-        }
+            return;
+        } 
 
-        for (int i = 0; i < interactablesWholeList.Count; i++)
+        int index = Random.Range(0, _interactables.Count-1);
+        for (int i = 0; i < _interactables.Count; i++) //deactivate all
         {
-                interactablesWholeList[i].gameObject.SetActive(false);
-                for (int j = 0; j < interactablesWholeList[i].components.Count; j++)
-                {
-                    interactablesWholeList[i].components[j].transform.position += new Vector3(100, 100, 100);
-                }
+            _interactables[i].gameObject.SetActive(false);
+            for (int j = 0; j < _interactables[i].components.Count; j++)
+            {
+                _interactables[i].components[j].transform.position += new Vector3(100, 100, 100);
+            }
         }
-        Interactable _interactable = interactablesWholeList[datas[index].refWholeListIndexPrefab];
-        _interactable.gameObject.SetActive(true);
-        _interactable.data = datas[index];
+        Interactable _interactable = _interactables[index];
+        //_interactable.data = datas[index];
         _interactable.InitialiseInteractable();
         _interactable.alreadyUsed = true;
     }
@@ -103,7 +91,9 @@ public class GPCtrl : MonoBehaviour
         {
             _interactable.components[i].SetActive(false);
         }
-        allowNewLimbActivation = true;
+        Debug.Log("deactivate interactable");
+        //allowNewLimbActivation = true;
+        //InstantiateRandomInteractable();
     }
 
     private void Update()
