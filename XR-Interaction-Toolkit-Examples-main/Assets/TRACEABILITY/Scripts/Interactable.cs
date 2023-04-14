@@ -33,9 +33,6 @@ public class Interactable : MonoBehaviour
         {
             components[j].transform.position = componentsTransform[j];
         }
-
-
-        // here put right textures
     }
 
     private void Update()

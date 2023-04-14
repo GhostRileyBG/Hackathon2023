@@ -79,7 +79,6 @@ public class GPCtrl : MonoBehaviour
             }
         }
         Interactable _interactable = _interactables[index];
-        //_interactable.data = datas[index];
         _interactable.InitialiseInteractable();
         _interactable.alreadyUsed = true;
     }
@@ -92,8 +91,6 @@ public class GPCtrl : MonoBehaviour
             _interactable.components[i].SetActive(false);
         }
         Debug.Log("deactivate interactable");
-        //allowNewLimbActivation = true;
-        //InstantiateRandomInteractable();
     }
 
     private void Update()
