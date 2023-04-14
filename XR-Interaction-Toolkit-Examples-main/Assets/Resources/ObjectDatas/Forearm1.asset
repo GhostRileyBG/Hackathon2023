@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c990910bbd579b94eab54441cf23ec6d, type: 3}
   m_Name: Forearm1
   m_EditorClassIdentifier: 
-  objectState: 1
+  objectState: 0
   prefabObject: {fileID: 8814043244324954899, guid: 83848b2d1c411e34f84ceb166e959433,
     type: 3}
   shouldPlayBrokenSound: 0
   refIndexPrefab: 1
   refWholeListIndexPrefab: 1
+  texturegaetan: {fileID: 0}

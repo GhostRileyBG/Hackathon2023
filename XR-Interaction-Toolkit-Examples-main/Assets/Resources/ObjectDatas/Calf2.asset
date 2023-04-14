@@ -18,3 +18,4 @@ MonoBehaviour:
   shouldPlayBrokenSound: 0
   refIndexPrefab: 4
   refWholeListIndexPrefab: 10
+  texturegaetan: {fileID: 0}

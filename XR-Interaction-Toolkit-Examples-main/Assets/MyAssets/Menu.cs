@@ -20,10 +20,15 @@ public class Menu : MonoBehaviour
         StartCoroutine(launch());
     }
 
+    public void quitGame()
+    {
+        Application.Quit();
+    }
+
     public IEnumerator launch()
     {
         click.Play(0);
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.2f);
         SceneManager.LoadScene("Game");
     }
 
