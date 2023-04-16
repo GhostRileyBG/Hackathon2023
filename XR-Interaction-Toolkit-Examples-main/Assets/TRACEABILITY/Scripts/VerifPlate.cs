@@ -46,11 +46,10 @@ public class VerifPlate : MonoBehaviour
         }
         for (int i = 0; i < currentObject.components.Count; i++) // destroy all plates of object inspected
         {
-            currentObject.components[i].transform.SetParent(currentObject.transform);
-            //Destroy(currentObject.components[i]);
+            //currentObject.components[i].transform.SetParent(currentObject.transform);
+            currentObject.components[i].SetActive(false);
         }
         GPCtrl.instance.DeactivateInteractable(currentObject);
-        //Destroy(currentObject.gameObject);
         currentObject = null;
     }
 

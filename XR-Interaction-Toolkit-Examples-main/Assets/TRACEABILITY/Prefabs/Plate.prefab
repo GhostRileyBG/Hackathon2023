@@ -111,3 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoneType: 0
+  currentObject: {fileID: 0}
+  redLight: {fileID: 0}
+  greenLight: {fileID: 0}
+  correctSFX: {fileID: 0}
+  incorrectSFX: {fileID: 0}

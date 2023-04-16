@@ -362,7 +362,11 @@ MonoBehaviour:
   - {fileID: 3690408677215482188}
   - {fileID: 2764257629714435278}
   - {fileID: 1339009126067775658}
+  componentsTransform: []
   soundMovement: {fileID: 0}
+  alreadyUsed: 0
+  objectState: 0
+  shouldPlayBrokenSound: 0
 --- !u!114 &1658597982
 MonoBehaviour:
   m_ObjectHideFlags: 0
