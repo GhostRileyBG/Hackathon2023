@@ -44,11 +44,6 @@ public class VerifPlate : MonoBehaviour
             Debug.Log("TOO BAD, YOU GOT IT WRONG");
             StartCoroutine(lightUp(false));
         }
-        for (int i = 0; i < currentObject.components.Count; i++) // destroy all plates of object inspected
-        {
-            //currentObject.components[i].transform.SetParent(currentObject.transform);
-            currentObject.components[i].SetActive(false);
-        }
         GPCtrl.instance.DeactivateInteractable(currentObject);
         currentObject = null;
     }

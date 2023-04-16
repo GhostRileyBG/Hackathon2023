@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class GPCtrl : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class GPCtrl : MonoBehaviour
     public GameObject table;
     public GameObject gameOver;
     public List<Interactable> interactablesWholeList;
-    public bool allowNewLimbActivation = true;
+    public bool allowNewLimbActivation = false;
 
     public void Awake()
     {
@@ -44,6 +45,11 @@ public class GPCtrl : MonoBehaviour
         }
         table.SetActive(true);
         gameOver.SetActive(false);
+        Debug.LogError("start of game");
+        transform.DOMove(transform.position, 1f).OnComplete(() =>
+        {
+            InstantiateRandomInteractable();
+        });
     }
 
     public void ValidateChoice()
@@ -97,11 +103,11 @@ public class GPCtrl : MonoBehaviour
     {
         timerText.text = (maxTime - timer).ToString();
         scoreText.text = score.ToString();
-        if (allowNewLimbActivation)
-        {
-            allowNewLimbActivation = false;
-            InstantiateRandomInteractable();
-        }
+        //if (allowNewLimbActivation)
+        //{
+        //    allowNewLimbActivation = false;
+        //    InstantiateRandomInteractable();
+        //}
 
         if (timer >= maxTime)
         {
